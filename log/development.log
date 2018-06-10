@@ -112,3 +112,105 @@ Processing by PostsController#new as HTML
   Parameters: {"post"=>{"action"=>"create", "authenticity_token"=>"wM0kUAuTuVVs64yO9C+2FgVExLWEkXYBL4fHjMvdHb/wXQBnEIZ1bXK7fKn5neP40gN03qULwt9kcGv5dkFKWg==", "commit"=>"Submit Post", "controller"=>"posts", "description"=>"asdf", "title"=>"Rails Introduction Quiz", "utf8"=>"✓"}}
   Rendered posts/new.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-06-10 12:29:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kaylafitzgerald/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (1.3ms)
+Completed 200 OK in 23ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2018-06-10 12:29:33 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 365ms (Views: 363.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2018-06-10 12:29:33 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2018-06-10 12:29:33 -0400
+
+
+Started GET "/posts/new" for ::1 at 2018-06-10 12:29:42 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=kayla&post%5Bdescription%5D=aljfakdjhf" for ::1 at 2018-06-10 12:33:33 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"kayla", "description"=>"aljfakdjhf"}}
+  Rendered posts/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-10 12:33:40 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"aljfa", "description"=>"dsfadf"}, "authenticity_token"=>"pthn+6ZIbECc4Hr6Wt4ejmzlh2C7Ud+mPRv8CR2BGxuLKDZOUXSB32p0Fq80vwDAtUq2FVLtYsq19/nCC16yXw=="}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "aljfa"], ["description", "dsfadf"], ["created_at", "2018-06-10 16:33:40.424818"], ["updated_at", "2018-06-10 16:33:40.424818"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 12ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/posts" for ::1 at 2018-06-10 12:33:40 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=kayla&post%5Bdescription%5D=aljfakdjhf" for ::1 at 2018-06-10 12:37:11 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"kayla", "description"=>"aljfakdjhf"}}
+  Rendered posts/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=kayla&post%5Bdescription%5D=aljfakdjhf" for ::1 at 2018-06-10 12:37:13 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"kayla", "description"=>"aljfakdjhf"}}
+  Rendered posts/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=kayla&post%5Bdescription%5D=aljfakdjhf" for ::1 at 2018-06-10 12:38:10 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"kayla", "description"=>"aljfakdjhf"}}
+  Rendered posts/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 350ms (Views: 332.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-10 12:38:15 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QHGHAqGONn+tLwcaJDFt2eV4OnfFPz+s4kwPGILBD3dtgda3VrLb4Fu7a09KUHOXPNcLAiyDgsBqoArTlB6mMw==", "post"=>{"title"=>"kayla", "description"=>"afaf"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "kayla"], ["description", "afaf"], ["created_at", "2018-06-10 16:38:15.475937"], ["updated_at", "2018-06-10 16:38:15.475937"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 19ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/posts" for ::1 at 2018-06-10 12:38:20 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-06-10 12:38:25 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-06-10 12:39:54 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 355ms (Views: 338.9ms | ActiveRecord: 0.0ms)
