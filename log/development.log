@@ -112,3 +112,67 @@ Processing by PostsController#new as HTML
   Parameters: {"post"=>{"action"=>"create", "authenticity_token"=>"wM0kUAuTuVVs64yO9C+2FgVExLWEkXYBL4fHjMvdHb/wXQBnEIZ1bXK7fKn5neP40gN03qULwt9kcGv5dkFKWg==", "commit"=>"Submit Post", "controller"=>"posts", "description"=>"asdf", "title"=>"Rails Introduction Quiz", "utf8"=>"✓"}}
   Rendered posts/new.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-06-11 10:55:20 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/lediobode/.rvm/gems/ruby-2.3.3/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (4.0ms)
+Completed 200 OK in 41ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2018-06-11 10:55:41 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 771ms (Views: 767.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-06-11 10:56:08 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=Led&post%5Bdescription%5D=smadbsmb" for ::1 at 2018-06-11 10:56:17 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"Led", "description"=>"smadbsmb"}}
+  Rendered posts/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=&post%5Bdescription%5D=" for ::1 at 2018-06-11 10:56:19 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"", "description"=>""}}
+  Rendered posts/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=&post%5Bdescription%5D=" for ::1 at 2018-06-11 10:56:20 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"", "description"=>""}}
+  Rendered posts/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=dsd&post%5Bdescription%5D=fdf" for ::1 at 2018-06-11 11:13:41 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"dsd", "description"=>"fdf"}}
+  Rendered posts/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 71ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=dsd&post%5Bdescription%5D=fdf" for ::1 at 2018-06-11 11:16:48 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"dsd", "description"=>"fdf"}}
+  Rendered posts/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 428ms (Views: 413.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts?post%5Btitle%5D=sdf&post%5Bdescription%5D=dsf" for ::1 at 2018-06-11 11:16:52 -0400
+Processing by PostsController#index as HTML
+  Parameters: {"post"=>{"title"=>"sdf", "description"=>"dsf"}}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 25ms (Views: 20.7ms | ActiveRecord: 0.4ms)
